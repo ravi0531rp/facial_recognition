@@ -14,9 +14,9 @@ import torch
 import numpy as np
 import torch.nn.functional as F
 
-from model_lib.MiniFASNet import MiniFASNetV1, MiniFASNetV2,MiniFASNetV1SE,MiniFASNetV2SE
-from data_io import transform as trans
-from utility import get_kernel, parse_model_name
+from anti_spoof.model_lib.MiniFASNet import MiniFASNetV1, MiniFASNetV2,MiniFASNetV1SE,MiniFASNetV2SE
+from anti_spoof.data_io import transform as trans
+from .utility import get_kernel, parse_model_name
 
 MODEL_MAPPING = {
     'MiniFASNetV1': MiniFASNetV1,
@@ -24,7 +24,6 @@ MODEL_MAPPING = {
     'MiniFASNetV1SE':MiniFASNetV1SE,
     'MiniFASNetV2SE':MiniFASNetV2SE
 }
-
 
 class Detection:
     def __init__(self):
